@@ -6,13 +6,58 @@
   margin: 0;
 }
 
+.container-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  row-gap: 2em;
+  grid-template-areas: 
+  "header header"
+  "description description"
+  "col1 col2";
+  margin: 3em 10em;
+}
+
+.container-flex-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .nick-title {
   font-family: 'Syne Mono', monospace;
 }
+
+.header-info {
+  grid-area: header;
+  justify-self: center;
+}
+
+.header-info > img {
+  position: relative;
+  left: 5em;
+}
+
 
 .profile-image {
   border-radius: 50%;
   max-width: 50%;
   max-height: 50%;
   width: 20em;
+}
+
+.about {
+  grid-area: description;
+}
+
+.skills {
+  grid-area: col1;
+}
+
+.education {
+  grid-area: col2;
+}
+
+.contact {
+  grid-area: col2;
 }
